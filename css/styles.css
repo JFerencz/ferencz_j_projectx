@@ -1,0 +1,19 @@
+body {
+	height: 2000px;
+}
+.spacer {
+	height:600px;
+	
+}
+
+#testBox {
+	height:100px;
+	width:100px;
+	background: blue;
+}
+
+#trigger {
+	width:100%;
+	height:1px;
+	background: black;
+}
