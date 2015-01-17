@@ -16,6 +16,13 @@ body {
 
 /*--------------------ID Selectors--------------------*/
 
+#splashTitle {
+	width: 100%;
+	height: inherit;
+	background: url(../image/flow_title_stencil.png) no-repeat;
+	background-size: contain;
+}
+
 #testBox {
 	height:100px;
 	width:100px;
