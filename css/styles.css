@@ -1,10 +1,20 @@
+
+/*--------------------HTML Selectors------------------*/
+
 body {
 	height: 2000px;
+	background: #fffbf0 url(../image/watercolour_bg_2.jpg) no-repeat;
+	background-size: 100% auto;
+	background-attachment: fixed;
 }
+
+/*--------------------CLASS Selectors--------------------*/
+
 .spacer {
 	height:600px;
-	
 }
+
+/*--------------------ID Selectors--------------------*/
 
 #testBox {
 	height:100px;
