@@ -3,7 +3,8 @@
 
 body {
 	height: 2000px;
-	background: #fffbf0 url(../image/watercolour_bg_2.jpg) no-repeat;
+	background: #fffbf0;
+	background-image:url(../image/watercolour_bg_2.jpg);
 /* 	background-size: 100% auto; */
 	background-size:cover;
 	background-attachment: fixed;
@@ -44,10 +45,10 @@ img.emph {
 .headerText {
 	margin: 0 auto;
 	border-bottom: 2px solid white;
-	width: 50%;
+/* 	width: 50%; */
 	opacity:0;
 }
-.headerText h2{
+.headerText h1{
 	color: white;
 	text-align: center;
 	font-size: 60px;
@@ -62,7 +63,6 @@ img.emph {
 	text-align: center;
 	position:relative;	
 	overflow:hidden;
-	margin:10px;
 }
 
 #splashTitle {
@@ -74,7 +74,7 @@ img.emph {
 	width:100%;
 }
 
-#splashTitle div {
+#sectionOne .whitespace {
 	background:white;
 	width:100%;
 }
@@ -91,16 +91,15 @@ img.emph {
 	background: black;
 }
 
-#sectionTwo{
-	color: white;
-}
-
 #sectionFour {
 	text-align: center;	
 }
 
 #infoGraphic {
-	margin: 0px 15px 0px 15px;
+
+}
+
+#infoGraphic video{
 	padding: 20px;
-	border: 2px solid white;
+	border: 2px solid white;	
 }
