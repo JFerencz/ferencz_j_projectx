@@ -4,7 +4,7 @@
 body {
 	font-family: Helvetica;
 	font-weight: 100;
-	color:black;
+	color:white;
 	background:#fffbf0;
 }
 section {
@@ -12,11 +12,6 @@ section {
 	z-index: 3;
 	text-align: center;
 	position:relative;
-}
-
-section .container-fluid {
-	padding-top: 10%;	
-	
 }
 
 img.emph {
@@ -70,15 +65,16 @@ img.emph {
 
 
 #staticBG {
-	background: #fffbf0 url(../image/watercolour_bg_2.jpg) no-repeat center top;
+	background: #fff1d9 url(../image/watercolour_bg_2_darker.jpg) no-repeat center top;
 	z-index: 2;
 	
 }
 #staticBG2{
-	background: #fffbf0 url(../image/watercolour_bg_2b.jpeg) no-repeat center bottom;
+	background: #fff1d9 url(../image/watercolour_bg_2_darker.jpg) no-repeat center bottom;
 	z-index: 1;
 }
 #staticBG,#staticBG2 {
+	width:100%;height:100%;
 	position:fixed;
 	top:0px;
 	background-size:cover;
@@ -144,7 +140,7 @@ img.emph {
 }
 
 #sectionFive blockquote {
-	border-right: 5px solid #40C1AC;
+	border-right: 5px solid #0D5257;
 }
 
 /************************************************************************/
@@ -152,12 +148,15 @@ img.emph {
 /************************************************************************/
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
-
+	section .container-fluid {
+		padding-top: 10%;	
+		
+	}
 
 }
 
 /* Small devices (desktops, 768px and down) */
-@media (min-width: 991px) {
+@media (min-width: 768px) {
 	.blurb {
 		font-size: 20px;
 	}

@@ -18,9 +18,9 @@ $(document).ready(function($) {
 	sceneOne.setTween(wipeOut).addTo(controller);
 	
 	var pin1 = new ScrollScene({triggerElement: "#sectionTwo",offset:0, triggerHook: 0,duration: 500,	reverse: true }).setPin("#sectionTwo .container-fluid"); 
-	var pin2 = new ScrollScene({triggerElement: "#sectionThree",offset: $("#sectionOne .blurb").height()/2,triggerHook: 0, duration: 300,	reverse: true }).setPin("#sectionThree .container-fluid"); 
+	var pin2 = new ScrollScene({triggerElement: "#sectionThree",offset:0,triggerHook: 0, duration: 300,	reverse: true }).setPin("#sectionThree .container-fluid"); 
 	var pin3 = new ScrollScene({triggerElement: "#sectionFour",offset: 0,triggerHook: 0, duration: 500,	reverse: true }).setPin("#sectionFour .container-fluid"); 
-	var pin4 = new ScrollScene({triggerElement: "#sectionFive",offset: 0,triggerHook: 0, duration: 500,	reverse: true }).setPin("#sectionFive .container-fluid"); 
+	var pin4 = new ScrollScene({triggerElement: "#sectionFive",offset: 0,triggerHook: 0, duration: 800,	reverse: true }).setPin("#sectionFive .container-fluid"); 
 	
 
 // Add Scenes to ScrollMagic Controller
@@ -64,7 +64,7 @@ controller.addScene([
 	basicScrollIn(sectionFour,controller,400);		
 	
 	//Additional Actions (beyond basic actions)
-	var emphasisText = TweenMax.staggerTo("span.emphTxt", 0.5, {color:"#004851", ease:Back.easeIn}, 0.5);	
+	var emphasisText = TweenMax.staggerTo("span.emphTxt", 0.5, {color:"#B1E4E3", ease:Back.easeIn}, 0.5);	
 	var sceneFourEmphText = new ScrollScene({triggerElement:"#sectionFour",offset:400}).setTween(emphasisText).addTo(controller);
 	
 	var emphasisImg = TweenMax.staggerTo(".emph", 0.5, {opacity:"1", ease:Back.easeIn}, 0.5);
@@ -75,7 +75,7 @@ controller.addScene([
 	var sectionFive = $("#sectionFive");
 	var sectionFiveObjects = $("#sectionFive,#sectionFive .headerText, #sectionFive .blurb");
 
-	basicScrollOut(sectionFourObjects,sectionFive,controller);
+// 	basicScrollOut(sectionFourObjects,sectionFive,controller);
 	basicScrollIn(sectionFive,controller,0);	
 
 
