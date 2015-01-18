@@ -1,8 +1,10 @@
 var controller;
-var wHeight = $(window).height();
+var wHeight = $(window).outerHeight();
 var wWidth = $(window).width();
 
 $(window).load(function() {
+	wHeight = $(window).outerHeight();
+	wWidth = $(window).width();	
 	splashResize();
 	$("#loader").fadeOut();
 });
