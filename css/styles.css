@@ -2,18 +2,16 @@
 /*--------------------HTML Selectors------------------*/
 
 body {
-	height: 2000px;
-	background: #fffbf0 url(../image/watercolour_bg_2.jpg) no-repeat;
-/* 	background-size: 100% auto; */
-	background-size:cover;
-	background-attachment: fixed;
-	background-position: center top;
 	font-family: Helvetica;
 	font-weight: 100;
-	color:white;
+	color:black;
+	background:#fffbf0;
 }
 section {
 	position:relative;
+	width:100%;
+	z-index: 2;
+	text-align: center;
 }
 
 img.emph {
@@ -43,18 +41,23 @@ img.emph {
 }
 .headerText {
 	margin: 0 auto;
-	border-bottom: 2px solid white;
-	width: 50%;
 	opacity:0;
 }
-.headerText h2{
-	color: white;
+.headerText h1{
 	text-align: center;
-	font-size: 60px;
+/* 	font-size: 60px; */
 }
 
 
 /*--------------------ID Selectors--------------------*/
+
+#staticBG {
+	position:fixed;
+	top:0px;
+	background: #fffbf0 url(../image/watercolour_bg_2.jpg) no-repeat center top;
+	background-size:cover;
+	z-index: 1;
+}
 
 #sectionOne {
 	width:100%;
@@ -62,7 +65,6 @@ img.emph {
 	text-align: center;
 	position:relative;	
 	overflow:hidden;
-	margin:10px;
 }
 
 #splashTitle {
@@ -74,7 +76,7 @@ img.emph {
 	width:100%;
 }
 
-#splashTitle div {
+#sectionOne .whitespace {
 	background:white;
 	width:100%;
 }
@@ -91,16 +93,15 @@ img.emph {
 	background: black;
 }
 
-#sectionTwo{
-	color: white;
-}
-
 #sectionFour {
 	text-align: center;	
 }
 
 #infoGraphic {
-	margin: 0px 15px 0px 15px;
+
+}
+
+#infoGraphic video{
 	padding: 20px;
-	border: 2px solid white;
+	border: 2px solid white;	
 }
