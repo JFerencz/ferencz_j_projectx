@@ -18,7 +18,7 @@ $(document).ready(function($) {
 	sceneOne.setTween(wipeOut).addTo(controller);
 	
 	var pin1 = new ScrollScene({triggerElement: "#sectionTwo",offset:0, triggerHook: 0,duration: 500,	reverse: true }).setPin("#sectionTwo .container-fluid"); 
-	var pin2 = new ScrollScene({triggerElement: "#sectionThree",offset:0,triggerHook: 0, duration: 300,	reverse: true }).setPin("#sectionThree .container-fluid"); 
+	var pin2 = new ScrollScene({triggerElement: "#sectionThree",offset:0,triggerHook: 0, duration: 500,	reverse: true }).setPin("#sectionThree .container-fluid"); 
 	var pin3 = new ScrollScene({triggerElement: "#sectionFour",offset: 0,triggerHook: 0, duration: 500,	reverse: true }).setPin("#sectionFour .container-fluid"); 	
 
 	controller.addScene([pin1,pin2,pin3]);		
@@ -54,7 +54,7 @@ $(document).ready(function($) {
 	basicScrollIn(sectionFour,controller,0);		
 	
 	//Additional Actions (beyond basic actions)
-	var emphasisText = TweenMax.staggerTo("span.emphTxt", 0.5, {css:{color:"#003B49","font-weight":"bold"}, ease:Back.easeIn}, 0.5);	
+	var emphasisText = TweenMax.staggerTo("span.emphTxt", 0.5, {css:{color:"white","font-weight":"bold"}, ease:Back.easeIn}, 0.5);	
 	var sceneFourEmphText = new ScrollScene({triggerElement:"#sectionFour",offset:400}).setTween(emphasisText).addTo(controller);
 	
 	var emphasisImg = TweenMax.staggerTo(".emph", 0.5, {opacity:"1", ease:Back.easeIn}, 0.5);

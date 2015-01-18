@@ -21,6 +21,15 @@ img.emph {
 	margin-top: 5%;
 }
 
+a {
+	color:white;
+	text-decoration: underline;
+}
+
+a:hover {
+	color:#dddddd;
+}
+
 /*--------------------CLASS Selectors--------------------*/
 
 .spacer {
@@ -46,7 +55,6 @@ img.emph {
 	text-align: center;
 	font-size: 40px;
 }
-
 
 /*--------------------ID Selectors--------------------*/
 
@@ -134,7 +142,9 @@ img.emph {
 #sectionFive img{
 	width:80%;
 	max-width: 300px;
-	margin: 20px 0;
+	margin: 15px 0;
+	border: 2px solid white;
+	padding:5px;
 }
 
 #sectionFive .blurb p {
@@ -142,7 +152,7 @@ img.emph {
 }
 
 #sectionFive blockquote {
-	border-right: 5px solid #0D5257;
+	border-right: 5px solid white;
 }
 
 /************************************************************************/
