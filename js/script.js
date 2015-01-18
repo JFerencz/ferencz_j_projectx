@@ -66,7 +66,8 @@ $(window).resize(function() {
 });
 
 function basicScrollOut(objects,trigger,controller){
-	var sceneRemovaltween = TweenMax.to(objects,1.5,{css:{opacity:0,top:-100}});
+	var sceneRemovaltween = TweenMax.to(objects,1.5,{css:{opacity:0,top:-300}});
+// 	var sceneRemovaltween = TweenMax.to(objects,1.5,{css:{position:"relative"}});
 	var sceneRemoval = new ScrollScene({triggerElement:trigger,duration:300}).setTween(sceneRemovaltween).addTo(controller);	
 }
 	  
@@ -77,10 +78,10 @@ function basicScrollIn(section,controller,offsetVal){
 	var headerTopPosition = 50;
 	var blurbTopPosition = $("#sectionTwo .headerText").height() +100;
 		
-	var headerEntry = TweenMax.to(sectionHeader,1.5,{css:{position:"fixed",top:headerTopPosition,left:"0px",right:"0px",opacity:1}});
+	var headerEntry = TweenMax.to(sectionHeader,2,{css:{position:"fixed",top:headerTopPosition,left:"0px",right:"0px",opacity:1}});
 	var sceneHeader = new ScrollScene({triggerElement:section,duration:400,offset:offsetVal}).setTween(headerEntry).addTo(controller);	
 	
-	var blurbEntry = TweenMax.to(sectionBlurb,1.5,{css:{position:"fixed",top:blurbTopPosition,left:"0px",right:"0px",opacity:1},delay:0});
+	var blurbEntry = TweenMax.to(sectionBlurb,2,{css:{position:"fixed",top:blurbTopPosition,left:"0px",right:"0px",opacity:1},delay:0});
 	var sceneBlurb = new ScrollScene({triggerElement:section,duration:400,offset:offsetVal}).setTween(blurbEntry).addTo(controller);	
 }
 
