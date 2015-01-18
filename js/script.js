@@ -20,16 +20,14 @@ $(document).ready(function($) {
 	var pin1 = new ScrollScene({triggerElement: "#sectionTwo",offset:0, triggerHook: 0,duration: 500,	reverse: true }).setPin("#sectionTwo .container-fluid"); 
 	var pin2 = new ScrollScene({triggerElement: "#sectionThree",offset:0,triggerHook: 0, duration: 300,	reverse: true }).setPin("#sectionThree .container-fluid"); 
 	var pin3 = new ScrollScene({triggerElement: "#sectionFour",offset: 0,triggerHook: 0, duration: 500,	reverse: true }).setPin("#sectionFour .container-fluid"); 
-	var pin4 = new ScrollScene({triggerElement: "#sectionFive",offset: 0,triggerHook: 0, duration: 800,	reverse: true }).setPin("#sectionFive .container-fluid"); 
+// 	var pin4 = new ScrollScene({triggerElement: "#sectionFive",offset: 0,triggerHook: 0, duration: 800,	reverse: true }).setPin("#sectionFive .container-fluid"); 
+	
 	
 
 // Add Scenes to ScrollMagic Controller
 controller.addScene([
-  pin1,pin2,pin3,pin4
-]);	
-
-	pin3.addIndicators();
-	pin4.addIndicators();		
+  pin1,pin2,pin3
+]);		
 
 
 
