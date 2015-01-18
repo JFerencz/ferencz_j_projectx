@@ -61,7 +61,7 @@ controller.addScene([
 	var sectionFourObjects = $("#sectionFour .headerText, #sectionFour .blurb");
 	
 	basicScrollOut(sectionThreeObjects,sectionFour,controller);
-	basicScrollIn(sectionFour,controller,400);		
+	basicScrollIn(sectionFour,controller,0);		
 	
 	//Additional Actions (beyond basic actions)
 	var emphasisText = TweenMax.staggerTo("span.emphTxt", 0.5, {color:"#B1E4E3", ease:Back.easeIn}, 0.5);	
@@ -75,7 +75,7 @@ controller.addScene([
 	var sectionFive = $("#sectionFive");
 	var sectionFiveObjects = $("#sectionFive,#sectionFive .headerText, #sectionFive .blurb");
 
-// 	basicScrollOut(sectionFourObjects,sectionFive,controller);
+	basicScrollOut(sectionFourObjects,sectionFive,controller);
 	basicScrollIn(sectionFive,controller,0);	
 
 
