@@ -68,7 +68,7 @@ $(window).resize(function() {
 
 function basicScrollOut(objects,trigger,controller){
 	var sceneRemovaltween = TweenMax.to(objects,1.5,{css:{opacity:0,top:-100}});
-	var sceneRemoval = new ScrollScene({triggerElement:trigger,offset:-wHeight/4,duration:200}).setTween(sceneRemovaltween).addTo(controller);	
+	var sceneRemoval = new ScrollScene({triggerElement:trigger,offset:-wHeight/4,duration:300}).setTween(sceneRemovaltween).addTo(controller);	
 }
 	  
 function basicScrollIn(section,controller){
@@ -79,10 +79,10 @@ function basicScrollIn(section,controller){
 	var blurbTopPosition = $("#sectionTwo .headerText").height() +100;
 		
 	var headerEntry = TweenMax.to(sectionHeader,1.5,{css:{position:"fixed",top:headerTopPosition,left:"0px",right:"0px",opacity:1}});
-	var sceneHeader = new ScrollScene({triggerElement:section,offset:-wHeight/4,duration:200}).setTween(headerEntry).addTo(controller);	
+	var sceneHeader = new ScrollScene({triggerElement:section,offset:-wHeight/4,duration:400}).setTween(headerEntry).addTo(controller);	
 	
 	var blurbEntry = TweenMax.to(sectionBlurb,1.5,{css:{position:"fixed",top:blurbTopPosition,left:"0px",right:"0px",opacity:1},delay:0});
-	var sceneBlurb = new ScrollScene({triggerElement:section,offset:-wHeight/5,duration:200}).setTween(blurbEntry).addTo(controller);	
+	var sceneBlurb = new ScrollScene({triggerElement:section,offset:-wHeight/5,duration:400}).setTween(blurbEntry).addTo(controller);	
 }
 
 function basicScrollInVideo(section,controller){
@@ -93,10 +93,10 @@ function basicScrollInVideo(section,controller){
 	var blurbTopPosition = $("#sectionTwo .headerText").height() +100;
 		
 	var headerEntry = TweenMax.to(sectionHeader,1.5,{css:{position:"fixed",top:headerTopPosition,left:"0px",right:"0px",opacity:1}});
-	var sceneHeader = new ScrollScene({triggerElement:section,offset:-wHeight/4,duration:200}).setTween(headerEntry).addTo(controller);	
+	var sceneHeader = new ScrollScene({triggerElement:section,offset:-wHeight/4,duration:400}).setTween(headerEntry).addTo(controller);	
 	
 	var blurbEntry = TweenMax.to(sectionBlurb,0.5,{css:{position:"fixed",top:blurbTopPosition,left:"0px",right:"0px",opacity:1},delay:0});
-	var sceneBlurb = new ScrollScene({triggerElement:section,offset:-wHeight/4+200}).setTween(blurbEntry).addTo(controller);	
+	var sceneBlurb = new ScrollScene({triggerElement:section,offset:-wHeight/4+400}).setTween(blurbEntry).addTo(controller);	
 }
 
 function splashResize(){
