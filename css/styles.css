@@ -2,17 +2,15 @@
 /*--------------------HTML Selectors------------------*/
 
 body {
-	height: 2000px;
-/*
-	background: #fffbf0 url(../image/watercolour_bg_2.jpg) no-repeat fixed center top;
-	background-size:cover;
 	font-family: Helvetica;
 	font-weight: 100;
-	color:white;
-*/
+	color:black;
 }
 section {
 	position:relative;
+	width:100%;
+	z-index: 2;
+	text-align: center;
 }
 
 img.emph {
@@ -42,18 +40,23 @@ img.emph {
 }
 .headerText {
 	margin: 0 auto;
-	border-bottom: 2px solid white;
-/* 	width: 50%; */
 	opacity:0;
 }
 .headerText h1{
-	color: white;
 	text-align: center;
-	font-size: 60px;
+/* 	font-size: 60px; */
 }
 
 
 /*--------------------ID Selectors--------------------*/
+
+#staticBG {
+	position:fixed;
+	top:0px;
+	background: #fffbf0 url(../image/watercolour_bg_2.jpg) no-repeat center top;
+	background-size:cover;
+	z-index: 1;
+}
 
 #sectionOne {
 	width:100%;

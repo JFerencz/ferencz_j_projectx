@@ -3,7 +3,6 @@ var wHeight = $(window).height();
 var wWidth = $(window).width();
 
 $(window).load(function() {
-    $("section").height(wHeight);
 	splashResize();
 });
 
@@ -20,14 +19,14 @@ $(document).ready(function($) {
 	var sectionTwo = $("#sectionTwo");
 	var sectionTwoObjects = $("#sectionTwo .headerText, #sectionTwo .blurb");
 	
-	basicScrollIn(sectionTwo,controller);	
+	basicScrollIn(sectionTwo,controller,-wHeight/3);	
 		
 /* --- SECTION 3 --- */
 	var sectionThree = $("#sectionThree");
 	var sectionThreeObjects = $("#sectionThree .headerText, #sectionThree .blurb");
 
 	basicScrollOut(sectionTwoObjects,sectionThree,controller);
-	basicScrollInVideo(sectionThree,controller);	
+	basicScrollIn(sectionThree,controller,0);	
 	
 	
 // 	var bgTransition = TweenMax.to("body",2,{css:{"background-image":"url(./image/watercolour_bg_2b.jpeg)"}})
@@ -42,22 +41,22 @@ $(document).ready(function($) {
 	var sectionFourObjects = $("#sectionFour .headerText, #sectionFour .blurb");
 	
 	basicScrollOut(sectionThreeObjects,sectionFour,controller);
-	basicScrollIn(sectionFour,controller);		
+	basicScrollIn(sectionFour,controller,0);		
 	
 	//Additional Actions (beyond basic actions)
 	var emphasisText = TweenMax.staggerTo("span.emphTxt", 0.5, {color:"#004851", ease:Back.easeIn}, 0.5);	
-	var sceneFourEmphText = new ScrollScene({triggerElement:"#sectionFour",offset:-wHeight/4+250}).setTween(emphasisText).addTo(controller);
+	var sceneFourEmphText = new ScrollScene({triggerElement:"#sectionFour",offset:400}).setTween(emphasisText).addTo(controller);
 	
 	var emphasisImg = TweenMax.staggerTo(".emph", 0.5, {opacity:"1", ease:Back.easeIn}, 0.5);
-	var sceneFourEmphImg  = new ScrollScene({triggerElement:"#sectionFour",offset:-wHeight/4+250}).setTween(emphasisImg).addTo(controller);	
+	var sceneFourEmphImg  = new ScrollScene({triggerElement:"#sectionFour",offset:400}).setTween(emphasisImg).addTo(controller);	
 
 /* --- SECTION 5 --- */
 
 	var sectionFive = $("#sectionFive");
-	var sectionFiveObjects = $("#sectionFive .headerText, #sectionFive .blurb");
+	var sectionFiveObjects = $("#sectionFive,#sectionFive .headerText, #sectionFive .blurb");
 
 	basicScrollOut(sectionFourObjects,sectionFive,controller);
-	basicScrollIn(sectionFive,controller);	
+	basicScrollIn(sectionFive,controller,0);	
 
 
 $(window).resize(function() {
@@ -68,10 +67,10 @@ $(window).resize(function() {
 
 function basicScrollOut(objects,trigger,controller){
 	var sceneRemovaltween = TweenMax.to(objects,1.5,{css:{opacity:0,top:-100}});
-	var sceneRemoval = new ScrollScene({triggerElement:trigger,offset:-wHeight/4,duration:300}).setTween(sceneRemovaltween).addTo(controller);	
+	var sceneRemoval = new ScrollScene({triggerElement:trigger,duration:300}).setTween(sceneRemovaltween).addTo(controller);	
 }
 	  
-function basicScrollIn(section,controller){
+function basicScrollIn(section,controller,offsetVal){
 	var sectionBlurb = section.find("div.blurb");
 	var sectionHeader = section.find("div.headerText"); 
 
@@ -79,27 +78,15 @@ function basicScrollIn(section,controller){
 	var blurbTopPosition = $("#sectionTwo .headerText").height() +100;
 		
 	var headerEntry = TweenMax.to(sectionHeader,1.5,{css:{position:"fixed",top:headerTopPosition,left:"0px",right:"0px",opacity:1}});
-	var sceneHeader = new ScrollScene({triggerElement:section,offset:-wHeight/4,duration:400}).setTween(headerEntry).addTo(controller);	
+	var sceneHeader = new ScrollScene({triggerElement:section,duration:400,offset:offsetVal}).setTween(headerEntry).addTo(controller);	
 	
 	var blurbEntry = TweenMax.to(sectionBlurb,1.5,{css:{position:"fixed",top:blurbTopPosition,left:"0px",right:"0px",opacity:1},delay:0});
-	var sceneBlurb = new ScrollScene({triggerElement:section,offset:-wHeight/5,duration:400}).setTween(blurbEntry).addTo(controller);	
-}
-
-function basicScrollInVideo(section,controller){
-	var sectionBlurb = section.find("div.blurb");
-	var sectionHeader = section.find("div.headerText"); 
-
-	var headerTopPosition = 50;
-	var blurbTopPosition = $("#sectionTwo .headerText").height() +100;
-		
-	var headerEntry = TweenMax.to(sectionHeader,1.5,{css:{position:"fixed",top:headerTopPosition,left:"0px",right:"0px",opacity:1}});
-	var sceneHeader = new ScrollScene({triggerElement:section,offset:-wHeight/4,duration:400}).setTween(headerEntry).addTo(controller);	
-	
-	var blurbEntry = TweenMax.to(sectionBlurb,0.5,{css:{position:"fixed",top:blurbTopPosition,left:"0px",right:"0px",opacity:1},delay:0});
-	var sceneBlurb = new ScrollScene({triggerElement:section,offset:-wHeight/4+400}).setTween(blurbEntry).addTo(controller);	
+	var sceneBlurb = new ScrollScene({triggerElement:section,duration:400,offset:offsetVal}).setTween(blurbEntry).addTo(controller);	
 }
 
 function splashResize(){
+    $("section").height(wHeight);
+	
 	elementOffset = $(window).height() - $('#splashTitle img').height();
     $("#splashTitle div").height(elementOffset/2);	
 } 
