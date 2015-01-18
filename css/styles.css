@@ -9,7 +9,7 @@ body {
 }
 section {
 	width:100%;
-	z-index: 3;
+	z-index: 4;
 	text-align: center;
 	position:relative;
 }
@@ -66,14 +66,18 @@ img.emph {
 
 #staticBG {
 	background: #fff1d9 url(../image/watercolour_bg_2_darker.jpg) no-repeat center top;
-	z-index: 2;
+	z-index: 3;
 	
 }
 #staticBG2{
-	background: #fff1d9 url(../image/watercolour_bg_2_darker.jpg) no-repeat center bottom;
+	background: #fff1d9 url(../image/watercolour_bg_3_darker.jpg) no-repeat center bottom;
+	z-index: 2;
+}
+#staticBG3{
+	background: #fff1d9 url(../image/watercolour_bg_4_darker.jpg) no-repeat center bottom;
 	z-index: 1;
 }
-#staticBG,#staticBG2 {
+#staticBG,#staticBG2,#staticBG3 {
 	width:100%;height:100%;
 	position:fixed;
 	top:0px;

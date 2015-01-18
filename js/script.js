@@ -68,6 +68,9 @@ controller.addScene([
 	var emphasisImg = TweenMax.staggerTo(".emph", 0.5, {opacity:"1", ease:Back.easeIn}, 0.5);
 	var sceneFourEmphImg  = new ScrollScene({triggerElement:"#sectionFour",offset:400}).setTween(emphasisImg).addTo(controller);	
 
+	var bgTransition = TweenMax.to("#staticBG2",2,{css:{"opacity":"0"}});
+	var sceneThreeBG = new ScrollScene({triggerElement:"#sectionFive",offset:-wHeight/3,duration:400}).setTween(bgTransition).addTo(controller);	
+
 /* --- SECTION 5 --- */
 
 	var sectionFive = $("#sectionFive");
