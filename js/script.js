@@ -4,6 +4,7 @@ var wWidth = $(window).width();
 
 $(window).load(function() {
 	splashResize();
+	$("#loader").fadeOut();
 });
 
 $(document).ready(function($) {
