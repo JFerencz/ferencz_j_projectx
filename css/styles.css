@@ -4,19 +4,30 @@
 body {
 	font-family: Helvetica;
 	font-weight: 100;
-	color:black;
+	color:white;
 	background:#fffbf0;
 }
 section {
-	position:relative;
 	width:100%;
-	z-index: 2;
+	z-index: 4;
 	text-align: center;
+	position:relative;
 }
 
 img.emph {
 	opacity:0;
-	margin: 10px;
+	width:30%;
+	max-width: 100px;
+	margin-top: 5%;
+}
+
+a {
+	color:white;
+	text-decoration: underline;
+}
+
+a:hover {
+	color:#dddddd;
 }
 
 /*--------------------CLASS Selectors--------------------*/
@@ -28,12 +39,10 @@ img.emph {
 	font-family: 'Cabin Sketch', cursive;	
 }
 .blurb {
-	width:80%;
 	font-size: 1em;
 	vertical-align: center;
-	font-size: 20px;
+	font-size: 16px;
 	margin: 0 auto;
-	opacity: 0;
 	text-align: center;	
 }
 .blurb p {
@@ -41,22 +50,45 @@ img.emph {
 }
 .headerText {
 	margin: 0 auto;
-	opacity:0;
 }
 .headerText h1{
 	text-align: center;
-/* 	font-size: 60px; */
+	font-size: 40px;
 }
-
 
 /*--------------------ID Selectors--------------------*/
 
+#loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('../image/loading.gif') 50% 50% no-repeat white;
+	background-size: 200px auto;	
+}
+
+
 #staticBG {
+	background: #fff1d9 url(../image/watercolour_bg_2_darker.jpg) no-repeat center top;
+	z-index: 3;
+	
+}
+#staticBG2{
+	background: #fff1d9 url(../image/watercolour_bg_3_darker.jpg) no-repeat center bottom;
+	z-index: 2;
+}
+#staticBG3{
+	background: #fff1d9 url(../image/watercolour_bg_4_darker.jpg) no-repeat center bottom;
+	z-index: 1;
+}
+#staticBG,#staticBG2,#staticBG3 {
+	width:100%;height:100%;
 	position:fixed;
 	top:0px;
-	background: #fffbf0 url(../image/watercolour_bg_2.jpg) no-repeat center top;
 	background-size:cover;
-	z-index: 1;
+
 }
 
 #sectionOne {
@@ -64,7 +96,7 @@ img.emph {
 	height:100%;
 	text-align: center;
 	position:relative;	
-	overflow:hidden;
+	overflow:hidden;	
 }
 
 #splashTitle {
@@ -97,11 +129,76 @@ img.emph {
 	text-align: center;	
 }
 
-#infoGraphic {
-
+#infoGraphic,.blurb{
+	max-width: 900px;
 }
 
 #infoGraphic video{
-	padding: 20px;
+	padding: 2px;
 	border: 2px solid white;	
+	
 }
+
+#sectionFive img{
+	width:80%;
+	max-width: 300px;
+	margin: 15px 0;
+	border: 2px solid white;
+	padding:5px;
+}
+
+#sectionFive .blurb p {
+	font-style: italic;
+}
+
+#sectionFive blockquote {
+	border-right: 5px solid white;
+}
+
+/************************************************************************/
+/**************************      MEDIA QUERIES     **********************/
+/************************************************************************/
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+	section .container-fluid {
+		padding-top: 10%;	
+		
+	}
+
+}
+
+/* Small devices (desktops, 768px and down) */
+@media (min-width: 768px) {
+	.blurb {
+		font-size: 20px;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+	.blurb p {
+
+	}
+	.headerText {
+		padding-top: 50px;
+	}
+	.headerText h1{
+	 	font-size: 60px; 
+	}
+	#infoGraphic video{
+		padding: 20px;
+		border: 2px solid white;	
+	}
+	img.emph {
+		margin-left: 5px;
+		margin-right: 5px; 		
+	}
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
