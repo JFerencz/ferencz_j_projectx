@@ -12,6 +12,7 @@ section {
 	z-index: 4;
 	text-align: center;
 	position:relative;
+
 }
 
 img.emph {
@@ -133,10 +134,20 @@ a:hover {
 	max-width: 900px;
 }
 
+#infoGraphic {
+	position:relative;
+	
+	z-index: 9999;
+
+}
+
+
 #infoGraphic video{
+	position:relative;
+	width:100%;
 	padding: 2px;
 	border: 2px solid white;	
-	
+	z-index: 9999!important;
 }
 
 #sectionFive img{

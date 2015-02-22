@@ -35,7 +35,7 @@ $(document).ready(function($) {
 	var sectionThree = $("#sectionThree");
 	var sectionThreeObjects = $("#sectionThree .headerText, #sectionThree .blurb");
 
-	basicScrollOut(sectionTwoObjects,sectionThree,controller);
+	basicScrollOut(sectionTwoObjects,sectionThree-100,controller);
 	basicScrollIn(sectionThree,controller,100);	
 	
 	
@@ -94,10 +94,10 @@ function basicScrollIn(section,controller,offsetVal){
 	var headerTopPosition = 0;
 	var blurbTopPosition = "30%";
 
-	var headerEntry = TweenMax.from(sectionHeader,2,{css:{opacity:0}});
+	var headerEntry = TweenMax.from(sectionHeader,2,{css:{opacity:0,"z-index":-1}});
 	var sceneHeader = new ScrollScene({triggerElement:section,duration:400,offset:offsetVal}).setTween(headerEntry).addTo(controller);	
 	
-	var blurbEntry = TweenMax.from(sectionBlurb,2,{css:{opacity:0}});
+	var blurbEntry = TweenMax.from(sectionBlurb,2,{css:{opacity:0,"z-index":-1}});
 	var sceneBlurb = new ScrollScene({triggerElement:section,duration:400,offset:offsetVal}).setTween(blurbEntry).addTo(controller);	
 
 
